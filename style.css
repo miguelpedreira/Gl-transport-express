@@ -31,7 +31,7 @@ body {
 }
 
 .header-top {
-    background: rgba(0,0,0,0.1);
+    background: rgba(201, 7, 7, 0.1);
     padding: 8px 0;
     text-align: center;
 }
@@ -67,12 +67,10 @@ body {
     width: 354px;
     margin-top: 0px;
 
-    transition: transform 0.9s ease;
+    
 }
 
-.logo img:hover {
-    transform: scale(1.05)
-}
+
 
 .nav-menu {
     display: flex;
@@ -790,7 +788,7 @@ body {
     
     .logo img {
         height: 276px;
-        width:387px;
+        width:350px;
     }
     
     .hero .container,
