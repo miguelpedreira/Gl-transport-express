@@ -20,8 +20,8 @@ body {
 
 /* Header Styles */
 .header {
-    background: linear-gradient(135deg, #2a7be4, #043f99);
-    color: bold;
+    background: #2c3e50;
+    color: white;
     position: relative;
     top: 0;
     width: 100%;
@@ -31,7 +31,7 @@ body {
 }
 
 .header-top {
-    background: rgba(201, 7, 7, 0.1);
+    background: #2c3e50;
     padding: 8px 0;
     text-align: center;
 }
@@ -73,14 +73,13 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    background: rgba(255,255,255,0.15);
+    background: #25d366;
     color: white;
     padding: 6px 12px;
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: bold;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 2px solid #25d366;
     transition: all 0.3s ease;
 }
 
@@ -103,7 +102,7 @@ body {
 }
 
 .nav-badge:hover {
-    background: rgba(255,255,255,0.25);
+    background: #128c7e;
     transform: translateY(-1px);
     box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
@@ -125,15 +124,11 @@ body {
 }
 
 .nav-menu a {
-    color: #2c3e50;
+    color: white;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
     position: relative;
-}
-
-.nav-menu a:hover {
-    color: #25d366;
 }
 
 .nav-menu a::after {

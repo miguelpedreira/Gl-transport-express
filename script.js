@@ -43,10 +43,11 @@ if (contactForm) {
             `*Telefone:* ${phone}%0A` +
             `*E-mail:* ${email}%0A` +
             `*Mensagem:* ${message}%0A%0A` +
+            `*Origem:* Contato através do site%0A%0A` +
             `Por favor, entre em contato com este cliente.`;
         
         // Open WhatsApp with the message
-        const whatsappUrl = `https://wa.me/5511948156262?text=${whatsappMessage}`;
+        const whatsappUrl = `https://wa.me/5511913133526?text=${whatsappMessage}`;
         window.open(whatsappUrl, '_blank');
         
         // Reset form
@@ -125,9 +126,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // WhatsApp button click tracking
 document.querySelectorAll('.whatsapp-link, .whatsapp-float a, .btn-primary').forEach(link => {
-    link.addEventListener('click', function() {
+    link.addEventListener('click', function(e) {
         // Track WhatsApp clicks (you can add analytics here)
         console.log('WhatsApp button clicked');
+        
+        // Add origin message for direct WhatsApp links (not form)
+        const href = this.getAttribute('href');
+        if (href && href.includes('wa.me/')) {
+            e.preventDefault();
+            
+            // Create message with site origin
+            const originMessage = `*Contato através do site - GL Transport Express*%0A%0A` +
+                `Olá! Encontrei seus serviços no site e gostaria de solicitar um orçamento.%0A%0A` 
+               ;
+            
+            // Open WhatsApp with origin message
+            const whatsappUrl = `https://wa.me/5511913133526?text=${originMessage}`;
+            window.open(whatsappUrl, '_blank');
+        }
     });
 });
 
